@@ -43,7 +43,7 @@ Create a .env file in the root directory with the following content:
 NODE_ENV = developement
 PORT = 5000
 
-DB_HOST = 185.27.134.127
+DB_HOST = fe80::26de:8aff:fe66:5dc1
 DB_USER = if0_38858193
 DB_PASS = ik9E3WMXldkQhF0
 DV_NAME = if0_38858193_BangdiBazaar
