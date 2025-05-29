@@ -40,13 +40,12 @@ npm install
 Create a .env file in the root directory with the following content:
 
 
-NODE_ENV = developement
-PORT = 5000
+PORT = 5432
 
-DB_HOST = fe80::26de:8aff:fe66:5dc1
-DB_USER = if0_38858193
-DB_PASS = ik9E3WMXldkQhF0
-DV_NAME = if0_38858193_BangdiBazaar
+DB_HOST = dpg-d0s4b824d50c73b8rdsg-a
+DB_USER = yash_user
+DB_PASS = pVlOJfQglbW1QXXJQs8tFAeKc6NMjWVJ
+DV_NAME = bangdibazaar
 
 
 
