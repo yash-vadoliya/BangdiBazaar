@@ -1,8 +1,19 @@
 const mysql = require('mysql');
 require('dotenv').config();
 
+const dns = require('dns');
+
+dns.lookup(process.env.DB_HOST, (err, address, family) => {
+  if (err) {
+    console.error('DNS lookup failed:', err);
+  } else {
+    console.log(`Address: ${address}, Family: IPv${family}`);
+  }
+});
+
+
 const con = mysql.createPool({
-    host:  process.env.DB_HOST,
+    host: process.env.DB_HOST,
     user: process.env.DB_USER,
     password: process.env.DB_PASS,
     database: process.env.DB_NAME,
