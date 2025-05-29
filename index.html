@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fetch API Example</title>
+</head>
+<body>
+  <div>Testing..</div>
+   <div id="imageContainer">Loading images...</div>
+
+  <script>
+    const imageContainer = document.getElementById('imageContainer');
+
+    fetch('http://localhost:5000/product/')
+      .then((response) => response.json())
+      .then((data) => {
+         imageContainer.innerHTML = ''; 
+        // Assuming `data` is an array and you're showing the first image
+        for(let i=0;i<data.length;i++){
+          const imageUrl = data[i]?.image_url;
+          if (imageUrl) {
+            const img =  document.createElement('img');
+            img.src = `http://localhost:5000/images/${imageUrl}`;
+            img.alt = `Image ${i}`;
+            img.width = 200;
+            img.style.margin = '10px';
+            imageContainer.appendChild(img);
+          } else {
+            console.error("Image URL not found");
+          }
+        }
+        
+      })
+      .catch(err => console.error("Fetch error:", err));
+  </script> 
+</body>
+</html>
