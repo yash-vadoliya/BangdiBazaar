@@ -40,11 +40,16 @@ npm install
 Create a .env file in the root directory with the following content:
 
 
-PORT=5000
-DB_HOST = localhost
-DB_USER = root
-DB_PASS = ''
-DV_NAME = nirav
+NODE_ENV = developement
+PORT = 5000
+
+DB_HOST = sql111.infinityfree.com
+DB_USER = if0_38858193
+DB_PASS = ik9E3WMXldkQhF0
+DV_NAME = if0_38858193_BangdiBazaar
+
+
+
 <!-- Replace the Mongo URI with your actual database connection string if hosted remotely. -->
 
 Run the app
