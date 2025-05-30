@@ -39,13 +39,11 @@ npm install
 
 Create a .env file in the root directory with the following content:
 
-
-PORT = 5432
-
-DB_HOST = dpg-d0s4b824d50c73b8rdsg-a
-DB_USER = yash_user
-DB_PASS = pVlOJfQglbW1QXXJQs8tFAeKc6NMjWVJ
-DV_NAME = bangdibazaar
+PORT = 5000
+DB_HOST = sql111.infinityfree.com
+DB_USER = if0_38858193
+DB_PASS = ik9E3WMXldkQhF0
+DV_NAME = if0_38858193_BangdiBazaar
 
 
 
