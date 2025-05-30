@@ -43,7 +43,7 @@ PORT = 3306
 DB_HOST = sql12.freesqldatabase.com
 DB_USER = sql12782125
 DB_PASS = ry8pqX5gpW
-DV_NAME = sql12782125
+DB_NAME = sql12782125
 
 <!-- Replace the Mongo URI with your actual database connection string if hosted remotely. -->
 
