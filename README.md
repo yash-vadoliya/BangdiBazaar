@@ -39,13 +39,11 @@ npm install
 
 Create a .env file in the root directory with the following content:
 
-PORT = 5000
-DB_HOST = sql111.infinityfree.com
-DB_USER = if0_38858193
-DB_PASS = ik9E3WMXldkQhF0
-DV_NAME = if0_38858193_BangdiBazaar
-
-
+PORT = 3306
+DB_HOST = sql12.freesqldatabase.com
+DB_USER = sql12782125
+DB_PASS = ry8pqX5gpW
+DV_NAME = sql12782125
 
 <!-- Replace the Mongo URI with your actual database connection string if hosted remotely. -->
 
