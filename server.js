@@ -15,11 +15,15 @@ app.use(bodyParser.json());
 
 app.use('/',route);
 
+app.get('/', (req, res) => {
+  res.send('Nirav API is live!');
+});
+
 app.use('/images', express.static(path.join(__dirname, 'public/images')));
 
 
 // document.writeln("Hello Yash");
 
 app.listen(PORT, () => {
-    console.log(`Listening at http://localhost:${PORT}`);
+    console.log(`Listening at server = `);
 })
