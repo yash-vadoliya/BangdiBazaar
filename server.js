@@ -25,5 +25,5 @@ app.use('/images', express.static(path.join(__dirname, 'public/images')));
 // document.writeln("Hello Yash");
 
 app.listen(PORT, () => {
-    console.log(`Listening at server = `);
+    console.log(`Listening at server = https://bangdibazaar.onrender.com`);
 })
