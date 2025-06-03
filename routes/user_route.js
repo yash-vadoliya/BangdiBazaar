@@ -13,11 +13,11 @@ router.get('/product', (req, res) => {
 });
 
 router.post("/product", upload.single('image'), async (req, res) => {
-    const { name } = req.body;
+    const { name, category } = req.body;
     const image_url = req.file ? `${req.file.filename}` : null;
 
-    console.log("Name : ", name);
-    console.log("Image : ", image_url);
+    // console.log("Name : ", name);
+    // console.log("Image : ", image_url);
     
     if (!name || !image_url) {
         return res.status(400).json({ message: 'Name and image are required' });
@@ -25,8 +25,8 @@ router.post("/product", upload.single('image'), async (req, res) => {
 
     try{
         await db.query(
-        'INSERT INTO `product` (`name`, `image_url`) VALUES (?, ?)',
-        [name, image_url],
+        'INSERT INTO `product` (`name`, `image_url`, `category`) VALUES (?, ?, ?)',
+        [name, image_url, category],
         (err, result) => {
             if (err) {
                 return res.status(500).json({ message: 'Database error', error: err.message });
@@ -41,11 +41,11 @@ router.post("/product", upload.single('image'), async (req, res) => {
 
 router.put('/product/:id', upload.single('image'), (req, res) => {
     const id = req.params.id;
-    const { name } = req.body;
+    const { name, category } = req.body;
     const image_url = req.file ? `  ${req.file.filename}` : null;
     db.query(
-        'UPDATE `product` SET `name` = ?, `image_url` = ? WHERE `id` = ?',
-        [name, image_url, id],
+        'UPDATE `product` SET `name` = ?, `image_url` = ?, `category` = ? WHERE `id` = ?',
+        [name, image_url,category, id],
         (err, result) => {
             if (err) {
                 return res.status(500).json({ message: 'Database error', error: err.message });
