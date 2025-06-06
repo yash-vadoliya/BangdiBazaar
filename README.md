@@ -39,12 +39,11 @@ npm install
 
 Create a .env file in the root directory with the following content:
 
-PORT = 3306
-DB_HOST = sql12.freesqldatabase.com
-DB_USER = sql12782125
-DB_PASS = ry8pqX5gpW
-DB_NAME = sql12782125
-
+PORT = your port
+DB_HOST = your host
+DB_USER = your user
+DB_PASS = your password
+DB_NAME = your database name
 <!-- Replace the Mongo URI with your actual database connection string if hosted remotely. -->
 
 Run the app
